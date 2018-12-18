@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Tetris one player</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive.min.css" />
+</head>
+<body>
+	<header class="header">
+		<div class="header__inner">
+			<img class="header__logo" src="images/logo.png" alt="tetris logo" />
+			<h1 class="header__title">1 or 2 players</h1>
+			<a id="menu" class="header__menu">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+				</svg>
+			</a>
+		</div>
+	</header>
+	<nav id="drawer" class="nav">
+		<ul class="nav__list">
+			<li class="nav__item"><a href="/">One player</a></li>
+			<li class="nav__item"><a href="/multiplayer">Two players</a></li>
+		</ul>
+	</nav>
+	<div class="main">
+		<div class="content">
+			<div class="center max-level">Maximum level is 10</div>
+			<div class="row">
+				<div class="col-6 align-right">Start:</div>
+				<div class="col-6">t</div>
+			</div>
+			<div class="row">
+				<div class="col-6 align-right">Move:</div>
+				<div class="col-6">left, right keys</div>
+			</div>
+			<div class="row">
+				<div class="col-6 align-right">Rotate:</div>
+				<div class="col-6">q, w, up keys</div>
+			</div>
+			<div class="row">
+				<div class="col-6 align-right">Fast drop:</div>
+				<div class="col-6">a</div>
+			</div>
+			<div class="row">
+				<div class="col-6 align-right">Slow drop</div>
+				<div class="col-6">down key</div>
+			</div>
+			<div class="row">
+				<div class="col-6 align-right">Pause/Unpause</div>
+				<div class="col-6">p</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="player center">
+						<div class="pick-level">
+							<label>Level</label>
+							<input type="number" min="0" max="10" />
+						</div>
+						<div>
+							<div class="level-error hide">Level must be between 0 and 10</div>
+							<div class="score">Score</div>
+							<div class="level">Level</div>
+							<div class="lines">Lines</div>
+							<div>
+								<canvas class="preview" width="60" height="60"></canvas>
+							</div>
+						</div>
+						<canvas class="tetris" width="240" height="400"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div>Copyright &copy; 1999, Alexei Kourbatov</div>
+		<div>Calvin Wei &copy 2017</div>
+	</div>
+	<script src="js/main.min.js"></script>
+</body>
+</html>
